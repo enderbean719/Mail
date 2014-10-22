@@ -10,8 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labelUpdate: UILabel!
+   
+    @IBOutlet weak var textField: UITextField!
+    
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        labelUpdate.text = labelUpdate.text! + textField.text
+        textField.text = ""
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelUpdate.text = ""
         // Do any additional setup after loading the view, typically from a nib.
     }
 
